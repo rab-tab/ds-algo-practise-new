@@ -26,6 +26,7 @@ public class ratMazeProb {
         // add 'D' direction in list
 
         //base case
+        if(arr[0][0]==0) return;
         if (currCol == totalCols && currRow == totalRows) {
             System.out.println("One route is " + sb.toString());
             return;
