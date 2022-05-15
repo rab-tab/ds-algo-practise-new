@@ -6,8 +6,8 @@ import java.util.Queue;
 
 public class Graph {
 
-    private int V;
-    private LinkedList<Integer> adj[];
+    public static int V;
+    public  static LinkedList<Integer> adj[];
 
     public Graph(int v) {
         V = v;
@@ -78,6 +78,7 @@ public class Graph {
                 DFSUtil(n, visited);
         }
     }
+
 
 }
 
