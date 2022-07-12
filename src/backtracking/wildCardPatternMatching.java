@@ -15,11 +15,15 @@ public class wildCardPatternMatching {
                                    int strIndex, int patternIndex) {
         if (strIndex == strLen && patternIndex == patternLen)
             return true;
-        if (strIndex == strLen ) {
-            return false;
+        if (patternIndex == patternLen) return false;
+        if (strIndex == strLen && patternIndex != patternLen) {
+            for (int i = patternIndex; i < patternLen; i++) {
+                if (pattern.charAt(i) != '*') return false;
+            }
+            return true;
         }
-        if(patternIndex == patternLen ) return false;
-        if( s.charAt(strIndex) != pattern.charAt(patternIndex)) return false;
+
+        if (s.charAt(strIndex) != pattern.charAt(patternIndex)) return false;
 
         if (s.charAt(strIndex) == pattern.charAt(patternIndex) || pattern.charAt(patternIndex) == '?') {
             return isMatch(s, pattern, strLen, patternLen, strIndex + 1, patternIndex + 1);
