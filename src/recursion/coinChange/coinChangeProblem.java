@@ -1,6 +1,6 @@
-package recursion;
+package recursion.coinChange;
 
-public class coinChangeProblemWithRepitition {
+public class coinChangeProblem {
     public static void main(String[] args) {
         int[] coins = {2, 5, 3, 6};
         int totalSum = 10;
@@ -10,7 +10,6 @@ public class coinChangeProblemWithRepitition {
     }
 
     public static void coinChange(int[] coins, int totalSum, int currSum, String currCombination, int currIndex) {
-        System.out.println("In coin change");
         if(currIndex==coins.length){
             if(totalSum==currSum){
                 System.out.println(currCombination + " . ");
@@ -20,11 +19,11 @@ public class coinChangeProblemWithRepitition {
         }
 
         //include current level coin
-        coinChange(coins, totalSum, currSum + coins[currIndex], currCombination + coins[currIndex] + "-",
-                currIndex++);
+            coinChange(coins, totalSum, currSum + coins[currIndex], currCombination + coins[currIndex] + "-",
+                currIndex+1);
 
         //dont include current level coin
         coinChange(coins, totalSum, currSum, currCombination ,
-                currIndex++);
+                currIndex+1);
     }
 }
