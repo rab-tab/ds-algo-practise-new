@@ -16,14 +16,14 @@ public class combinationSumWithoutRepitition {
             return;
 
         }
-
-        //include current level coin
-        combinationSum(coins, totalSum, currSum + coins[currIndex], currCombination + coins[currIndex] + "-",
-                currIndex+1);
-
         //dont include current level coin
         combinationSum(coins, totalSum, currSum, currCombination,
-                currIndex+1);
+                currIndex + 1);
+        //include current level coin
+        combinationSum(coins, totalSum, currSum + coins[currIndex], currCombination + coins[currIndex] + "-",
+                currIndex + 1);
+
+
     }
 
 }

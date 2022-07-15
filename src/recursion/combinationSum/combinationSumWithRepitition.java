@@ -9,20 +9,19 @@ public class combinationSumWithRepitition {
     }
 
     private static void combinationSum(int[] coins, int totalSum, int currSum, String currCombination, int currIndex) {
-        if (currIndex == coins.length) {
-            if (totalSum == currSum) {
-                System.out.println(currCombination + " . ");
-            }
+        // if (currIndex >= coins.length) return;
+        if (totalSum == currSum) {
+            System.out.println(currCombination);
             return;
-
         }
-
+        if(currIndex==coins.length || currSum>totalSum) return;
+        //include same index
+        combinationSum(coins, totalSum, currSum + coins[currIndex], currCombination+coins[currIndex],
+                currIndex);
         //include current level coin
-        combinationSum(coins, totalSum, currSum + coins[currIndex], currCombination + coins[currIndex] + "-",
-                currIndex+1);
-
-        //dont include current level coin
         combinationSum(coins, totalSum, currSum, currCombination,
-                currIndex+1);
+                currIndex + 1);
+
+
     }
 }
