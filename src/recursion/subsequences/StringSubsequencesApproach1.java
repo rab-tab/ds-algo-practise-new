@@ -1,8 +1,8 @@
-package recursion;
+package recursion.subsequences;
 
 import java.util.ArrayList;
 
-public class subsequences {
+public class StringSubsequencesApproach1 {
     public static void main(String[] args) {
         String s = "abc";
         ArrayList<String> result = generateSubsequence(s);
