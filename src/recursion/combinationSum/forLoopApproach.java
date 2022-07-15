@@ -25,7 +25,7 @@ public class forLoopApproach {
             return;
         }
 
-
+        if(idx==arr.length || currSum>targetSum) return;
         for (int i = idx; i < arr.length; i++) {
             tempAns.add(arr[i]);
             solve(arr, targetSum, currSum + arr[i],i);
