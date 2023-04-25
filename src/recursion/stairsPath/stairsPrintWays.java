@@ -1,9 +1,9 @@
-package recursion;
+package recursion.stairsPath;
 
 import java.util.ArrayList;
 
 //https://www.youtube.com/watch?v=hMJAlbJIS7E&list=PL-Jc9J83PIiFxaBahjslhBD1LiJAV7nKs&index=30
-public class stairsPath {
+public class stairsPrintWays {
     public static void main(String[] args) {
         int n = 3;
         ArrayList<String> paths = stairsPath(n);
