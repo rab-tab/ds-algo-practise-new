@@ -51,7 +51,9 @@ public class sudoku {
                             grid[i][j] = value;
                             boolean ans = solve(grid, n);
                             if (ans == true) return true;
-                            grid[i][j] = 0;
+                            else {
+                                grid[i][j] = 0;
+                            }
                         }
 
                     }
@@ -78,6 +80,12 @@ public class sudoku {
         int subMatrixRow = i / 3 * 3;
         int subMatrixColumn = j / 3 * 3;
 
+
+        //sub matrix
+        /*for(int k=0;k<9;k++){
+            if (grid[subMatrixRow + k/3][subMatrixColumn + k%3] == value) return false;
+
+        }*/
 
         //sub matrix
         for (int currRow = 0; currRow < 3; currRow++) {
