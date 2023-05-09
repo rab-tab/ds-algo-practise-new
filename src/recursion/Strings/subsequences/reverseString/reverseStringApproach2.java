@@ -1,4 +1,4 @@
-package recursion.Strings;
+package recursion.Strings.subsequences.reverseString;
 
 public class reverseStringApproach2 {
     public static String rev = "";

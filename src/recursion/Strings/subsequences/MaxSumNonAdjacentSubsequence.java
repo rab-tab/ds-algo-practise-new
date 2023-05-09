@@ -1,4 +1,4 @@
-package recursion.subsequences;
+package recursion.Strings.subsequences;
 
 public class MaxSumNonAdjacentSubsequence {
     static int max = Integer.MIN_VALUE;
@@ -6,7 +6,7 @@ public class MaxSumNonAdjacentSubsequence {
     public static void main(String[] args) {
         int arr[] = {2, 1, 4, 9};
         maxSum(arr, "", 0, 0);
-        System.out.println("Max is" + max);
+        System.out.println("Max is " + max);
 
     }
 

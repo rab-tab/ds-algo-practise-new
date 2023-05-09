@@ -1,4 +1,4 @@
-package recursion;
+package recursion.Strings;
 
 public class lcs {
     public static void main(String[] args) {

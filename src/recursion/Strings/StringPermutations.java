@@ -1,4 +1,4 @@
-package recursion;
+package recursion.Strings;
 
 public class StringPermutations {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package recursion.Strings;
+package recursion.Strings.subsequences.reverseString;
 
 public class reverseString {
     public static void main(String[] args) {

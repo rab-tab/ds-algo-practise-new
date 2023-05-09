@@ -1,6 +1,7 @@
-package recursion.subsequences;
+package recursion.Strings.subsequences;
 
-public class StringSubsequencesApproach2 {
+public class StringSubsequencesIncludeExcludeApproach {
+    //include exclude approach
     public static void main(String[] args) {
         String s = "abc";
         solve(s, 0, "");

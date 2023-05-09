@@ -1,6 +1,6 @@
-package recursion.subsequences;
+package recursion.Strings.subsequences;
 
-public class arrSubset {
+public class arrSubsequence {
     public static void main(String[] args) {
         int arr[] = {3, 2, 1};
         solve(arr, "", 0);
