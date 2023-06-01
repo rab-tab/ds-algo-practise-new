@@ -1,10 +1,10 @@
-package trees.views;
+package trees.views.topView;
 
 import trees.Node;
 
 import java.util.*;
 
-public class topView {
+public class topViewIterativeApproach {
     public static void main(String[] args) {
         Node root = new Node(10);
         root.left = new Node(20);

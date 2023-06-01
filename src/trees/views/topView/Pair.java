@@ -1,4 +1,4 @@
-package trees.views;
+package trees.views.topView;
 
 import trees.Node;
 
