@@ -24,33 +24,40 @@ public class BSTDeletion {
         //case 4 : both child exists : replace elem with inorder predecessor or inorder successor
 
         if (root == null) return root;
-        Node temp = findNodeInBST(root, elem);
+        // Node temp = findNodeInBST(root, elem);
+        if (root.data == elem) {
+            //case 1 : no children of elem
+            if (root.left == null && root.right == null) {
+                root = null;
+                return null;
+            }
 
-        //case 1 : no children of elem
-        if (root.left == null && root.right == null) {
-            root = null;
-            return null;
-        }
+            //case 2 : left -null , right - non null
+            else if (root.left == null && root.right != null) {
+                Node child = root.right;
+                root = null;
+                return child;
+            }
 
-        //case 2 : left -null , right - non null
-        else if (root.left == null && root.right != null) {
-            Node child = temp.right;
-            temp = null;
-            return child;
-        }
+            //case 3:  right - null , left -non null
+            else if (root.left != null && root.right == null) {
+                Node child = root.left;
+                root = null;
+                return child;
+            }
+            //case 4 : both child exists : replace elem with inorder predecessor or inorder successor
+            else {
+                int inorderPredecessor = inorderPredecessor(root, elem);
+                root.data = inorderPredecessor;
+                Node ans = deleteNodeInBST(root.left, inorderPredecessor);
+                if (ans == null) root.left = null;
+                return root;
 
-        //case 3:  right - null , left -non null
-        else if (root.left != null && root.right == null) {
-            Node child = temp.left;
-            temp = null;
-            return child;
-        }
-        //case 4 : both child exists : replace elem with inorder predecessor or inorder successor
-        else {
-            int inorderPredecessor = inorderPredecessor(temp, elem);
-            temp.data = inorderPredecessor;
-            return deleteNodeInBST(temp.left, inorderPredecessor);
-        }
+            }
+        } else if (elem > root.data) {
+            root.right = deleteNodeInBST(root.right, elem);
+        } else if (elem < root.data) root.left = deleteNodeInBST(root.left, elem);
+        return root;
     }
 
 
