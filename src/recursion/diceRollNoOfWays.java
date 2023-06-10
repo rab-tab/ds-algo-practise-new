@@ -6,7 +6,7 @@ public class diceRollNoOfWays {
         int k = 6;
         int target = 7;
         System.out.println("Total no of ways using recursion " + solve(n, k, target));
-        int[][] dp = new int[n+1][target+1];
+        int[][] dp = new int[n + 1][target + 1];
         topDown(n, k, target, dp);
         for (int i = 0; i < dp.length; i++) {
             for (int j = 0; j < dp[i].length; j++) {
@@ -14,8 +14,17 @@ public class diceRollNoOfWays {
             }
         }
 
-        System.out.println("Total no of ways using tabulation " + topDown(n, k, target, dp));
+        System.out.println("Total no of ways using top down " + topDown(n, k, target, dp));
+
+        for (int i = 0; i < dp.length; i++) {
+            for (int j = 0; j < dp[i].length; j++) {
+                dp[i][j] = 0;
+            }
+        }
+        System.out.println("Total no of ways using tabulation " + tabulation(n, k, target, dp));
+
     }
+
 
     private static int solve(int n, int k, int target) {
         if (n < 0) return 0;
@@ -42,4 +51,23 @@ public class diceRollNoOfWays {
         return dp[n][k] = ans;
 
     }
+
+    private static int tabulation(int n, int k, int target, int[][] dp) {
+        dp[0][0] = 1;
+
+        for (int index = 1; index <= n; index++) {
+            for (int t = 1; t <= target; t++) {
+                int ans = 0;
+                for (int i = 1; i <= k; i++) {
+                    if (t - i >= 0) {
+                        ans += dp[index - 1][t - i];
+                    }
+                }
+                dp[index][t] = ans;
+            }
+        }
+        return dp[n][target];
+    }
+
+
 }
