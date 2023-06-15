@@ -10,16 +10,19 @@ public class lcs {
                 dp[i][j] = -1;
             }
         }
-        System.out.println(lcs(s1, s2, s1.length()-1, s2.length()-1, dp));
+        System.out.println(topDownApproach(s1, s2, s1.length() - 1, s2.length() - 1, dp));
     }
 
-    public static int lcs(String s1, String s2, int i, int j, int[][] dp) {
+    public static int topDownApproach(String s1, String s2, int i, int j, int[][] dp) {
         if (i == 0 || j == 0) {
             return 0;
         }
+        int ans = 0;
         if (dp[i][j] != -1) return dp[i][j];
         if (s1.charAt(i - 1) == s2.charAt(j - 1))
-            return dp[i][j] = 1 + lcs(s1, s2, i - 1, j - 1, dp);
-        else return Math.max(lcs(s1, s2, i - 1, j, dp), lcs(s1, s2, i, j - 1, dp));
+            ans = 1 + topDownApproach(s1, s2, i - 1, j - 1, dp);
+        else ans = Math.max(topDownApproach(s1, s2, i - 1, j, dp), topDownApproach(s1, s2, i, j - 1, dp));
+        dp[i][j] = ans;
+        return ans;
     }
 }
