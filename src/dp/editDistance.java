@@ -1,9 +1,10 @@
 package dp;
 
+//imp
 public class editDistance {
     public static void main(String[] args) {
-        String s1 = "intention";
-        String s2 = "execution";
+        String s1 = "abcer";
+        String s2 = "abcd";
         int[][] dp = new int[s1.length()][s2.length()];
         for (int i = 0; i < s1.length(); i++) {
             for (int j = 0; j < s2.length(); j++) {
@@ -23,9 +24,9 @@ public class editDistance {
         if (s1.charAt(i) == s2.charAt(j))
             ans = solve(s1, s2, i + 1, j + 1, dp);
         else {
-            int insertAns = solve(s1, s2, i, j + 1, dp);
-            int replaceAns = solve(s1, s2, i + 1, j + 1, dp);
-            int deleteAns = solve(s1, s2, i + 1, j, dp);
+            int insertAns = 1 + solve(s1, s2, i, j + 1, dp);
+            int replaceAns = 1 + solve(s1, s2, i + 1, j + 1, dp);
+            int deleteAns = 1 + solve(s1, s2, i + 1, j, dp);
             ans = Math.min(Math.min(insertAns, replaceAns), deleteAns) + 1;
         }
         return dp[i][j] = ans;
