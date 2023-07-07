@@ -7,13 +7,12 @@ public class diceRollNoOfWays {
         int target = 7;
         System.out.println("Total no of ways using recursion " + solve(n, k, target));
         int[][] dp = new int[n + 1][target + 1];
-        topDown(n, k, target, dp);
         for (int i = 0; i < dp.length; i++) {
             for (int j = 0; j < dp[i].length; j++) {
                 dp[i][j] = -1;
             }
         }
-
+        topDown(n, k, target, dp);
         System.out.println("Total no of ways using top down " + topDown(n, k, target, dp));
 
         for (int i = 0; i < dp.length; i++) {
@@ -46,9 +45,9 @@ public class diceRollNoOfWays {
         if (dp[n][target] != -1) return dp[n][target];
         int ans = 0;
         for (int i = 1; i <= k; i++) {
-            ans += solve(n - 1, k, target - i);
+            ans += topDown(n - 1, k, target - i,dp);
         }
-        return dp[n][k] = ans;
+        return dp[n][target] = ans;
 
     }
 
