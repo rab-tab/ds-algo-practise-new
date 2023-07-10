@@ -11,7 +11,7 @@ public class TrieNode {
     }
 
     void insertWord(TrieNode root, String word) {
-        System.out.println("Inserting "+word);
+        System.out.println("Inserting " + word);
         if (word.length() == 0) {
             root.isTerminal = true;
             return;
@@ -26,6 +26,19 @@ public class TrieNode {
             root.children[index] = child;
         }
         insertWord(child, word.substring(1));
+    }
+
+    boolean searchWord(TrieNode root, String word) {
+        if (word.length() == 0) {
+            return root.isTerminal;
+        }
+        char ch = word.charAt(0);
+        int index = ch - 'a';
+        TrieNode child;
+        if (root.children[index] != null) {
+            child = root.children[index];
+        } else return false;
+        return searchWord(child, word.substring(1));
     }
 
 }
