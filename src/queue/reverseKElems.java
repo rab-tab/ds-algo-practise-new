@@ -41,7 +41,7 @@ public class reverseKElems {
 
         //step 3 - push n-k elems from q fron to back
         idx = 0;
-        if(q.size()-k ==0 ) return;
+        if (q.size() - k == 0) return;
         while (!q.isEmpty()) {
             int temp = q.peek();
             q.remove();

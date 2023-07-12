@@ -6,7 +6,7 @@ public class longestIncreasingSubsequence {
     public static void main(String[] args) {
         int curr = 0;
         int prev = -1;
-        int nums[] = {10, 9, 2, 5, 3, 7, 101, 18};
+        int nums[] = {10,9,2,5,3,7,101,18};
         System.out.println("Longest increasing subsequence length using recursion --" + solve(nums, curr, prev));
 
         int dp[][] = new int[nums.length][nums.length + 1];

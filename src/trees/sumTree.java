@@ -1,6 +1,7 @@
 package trees;
 
 public class sumTree {
+    //IMPORTANT
     public static void main(String[] args) {
         Node root = new Node(10);
         root.left = new Node(-2);

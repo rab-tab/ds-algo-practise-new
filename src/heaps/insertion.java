@@ -1,8 +1,5 @@
 package heaps;
 
-import trees.Node;
-
-import static trees.NodesSum.solve;
 
 public class insertion {
     static int size;

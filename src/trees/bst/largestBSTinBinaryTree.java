@@ -19,15 +19,14 @@ public class largestBSTinBinaryTree {
 
     private static int solve(Node root) {
         if (root == null) return 0;
+        int leftAns = solve(root.left);
+        int rightAns = solve(root.right);
+        ans = 1 + leftAns + rightAns;
         if (isValidBST(root)) {
             System.out.println("size is " + ans);
             max = Math.max(ans, max);
         }
-
-        int leftAns = solve(root.left);
-        int rightAns = solve(root.right);
-        ans = 1 + leftAns + rightAns;
-        return ans;
+        return max;
     }
 
     private static boolean isValidBST(Node root) {

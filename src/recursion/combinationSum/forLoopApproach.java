@@ -11,11 +11,11 @@ public class forLoopApproach {
         int arr[] = {2, 3, 6, 7};
         //{2,2,3} ,{7};
         int targetSum = 7;
-        solve(arr, targetSum, 0,0);
+        solve(arr, targetSum, 0, 0);
     }
 
 
-    public static void solve(int arr[], int targetSum, int currSum,int idx) {
+    public static void solve(int arr[], int targetSum, int currSum, int idx) {
         if (targetSum == currSum) {
             for (Integer i : tempAns) {
                 System.out.println(i);
@@ -25,10 +25,10 @@ public class forLoopApproach {
             return;
         }
 
-        if(idx==arr.length || currSum>targetSum) return;
+        if (idx == arr.length || currSum > targetSum) return;
         for (int i = idx; i < arr.length; i++) {
             tempAns.add(arr[i]);
-            solve(arr, targetSum, currSum + arr[i],i);
+            solve(arr, targetSum, currSum + arr[i], i);
             tempAns.remove(tempAns.size() - 1);
 
         }

@@ -1,7 +1,10 @@
 package recursion;
 
+import java.math.BigInteger;
+
 public class diceRollNoOfWays {
     public static void main(String[] args) {
+
         int n = 2;
         int k = 6;
         int target = 7;
@@ -33,8 +36,9 @@ public class diceRollNoOfWays {
         int ans = 0;
         for (int i = 1; i <= k; i++) {
             ans += solve(n - 1, k, target - i);
-        }
+        }BigInteger a=BigInteger.valueOf(10);
         return ans;
+
     }
 
     private static int topDown(int n, int k, int target, int[][] dp) {

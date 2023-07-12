@@ -2,8 +2,8 @@ package recursion.Strings;
 
 public class lcs {
     public static void main(String[] args) {
-        String s1="abcde";
-        String s2="abfc";
+        String s1="abcdabc";
+        String s2="bcbcda";
         System.out.println(lcs(s1,s2,s1.length(),s2.length()));
     }
 

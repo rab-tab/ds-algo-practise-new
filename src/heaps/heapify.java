@@ -1,6 +1,6 @@
 package heaps;
 
-//DE SHAW
+//DE SHAW - imp
 public class heapify {
     static int arr[] = {-1, 12, 14, 13, 17, 15};
 
@@ -42,5 +42,6 @@ public class heapify {
         arr[parentIdx] = elem1;
 
     }
+
 
 }

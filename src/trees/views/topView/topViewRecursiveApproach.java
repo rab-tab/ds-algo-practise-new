@@ -7,7 +7,6 @@ import java.util.Map;
 
 public class topViewRecursiveApproach {
     static Map<Integer, Integer> map = new HashMap<>();
-    //static int dist = 0;
 
     public static void main(String[] args) {
         Node root = new Node(10);

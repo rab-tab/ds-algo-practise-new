@@ -36,8 +36,10 @@ public class pathSum1 {
                 return;
             }
         }
-        solve(root.left, targetSum, currSum + root.data, ans + "-- " + root.data);
-        solve(root.right, targetSum, currSum + root.data, ans + "-- " + root.data);
+        currSum = currSum + root.data;
+        ans = ans + "-- " + root.data;
+        solve(root.left, targetSum, currSum, ans);
+        solve(root.right, targetSum, currSum, ans);
 
     }
 }
