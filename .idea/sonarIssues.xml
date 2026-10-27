@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/Graph/AdjListDirectedWeightedGraph.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/Graph/AdjacencyList.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/Graph/AdjacencyListDirectedGraph.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/Graph/AdjacencyMatrix.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/Graph/CycleDetectionUndirectedGraph.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/Graph/Graph.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/Graph/Pair.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/Graph/bfs.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/Graph/shortestPathBfs.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/ShoppingCart/CouponDecorator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/ShoppingCart/Item1.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/ShoppingCart/Item2.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/ShoppingCart/Main.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/ShoppingCart/PercentageCouponDecorator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/ShoppingCart/Product.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/ShoppingCart/ProductCategory.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/ShoppingCart/ShoppingCart.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/ShoppingCart/TypeCouponDecorator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/Show/Theater.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/composite/withoutCompositePattern/Expression.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/composite/withoutCompositePattern/expression/ArithmeticExpression.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/composite/withoutCompositePattern/expression/Expression.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/composite/withoutCompositePattern/expression/Main.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/composite/withoutCompositePattern/expression/Number.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/composite/withoutCompositePattern/expression/Operation.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/composite/withoutCompositePattern/with/FileSystem/File.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/lld-practise/src/main/java/composite/withoutCompositePattern/with/FileSystem/FileSystem.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/graphs/Graph.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/graphs/traversal/bfs.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/graphs/traversal/bfsApproach1.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/graphs/traversal/bfsApproach2.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/graphs/traversal/bfs_disconnected_graph.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/graphs/traversal/dfs.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

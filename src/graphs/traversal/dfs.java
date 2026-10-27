@@ -5,6 +5,7 @@ import java.util.*;
 public class dfs {
     static HashMap<Integer, List<Integer>> adjList = new HashMap<>();
     static boolean visited[];
+    static Stack<Integer> ans = new Stack<>();
 
     public static void main(String[] args) {
         // 0, - > 1,3
@@ -29,8 +30,13 @@ public class dfs {
         printAdjList();
         for (int i = 0; i < noOfNodes; i++) {
             if (!visited[i]) {
-                dfs(i, visited);
+                topologicalSort(i, visited,ans);
             }
+        }
+        System.out.println("Topological sort");
+        while(!ans.isEmpty()){
+            System.out.println(ans.peek());
+            ans.pop();
         }
 
     }
@@ -44,6 +50,19 @@ public class dfs {
                 dfs(i, visited);
             }
         }
+
+    }
+
+    static void topologicalSort(int source, boolean[] visited,Stack<Integer> ans) {
+        visited[source] = true;
+        List<Integer> tempAns = adjList.get(source);
+        for (Integer i : tempAns) {
+            if (!visited[i]) {
+                dfs(i, visited);
+            }
+        }
+        //while returning store node in stack
+        ans.push(source);
 
     }
 

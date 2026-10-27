@@ -17,12 +17,12 @@ public class Graph {
         }
     }
 
-    void addEdge(int v, int w) {
+    public void addEdge(int v, int w) {
         adj[v].add(w);
     }
 
-    //bfs from starting source s
-    void BFS(int s) {
+    //traversal from starting source s
+    public void BFS(int s) {
         // Mark all the vertices as not visited(By default
         // set as false)
         boolean visited[] = new boolean[V];

@@ -1,0 +1,9 @@
+
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(ΫοΚ8πάΎΆ1
+V
+squid:S1063"9Replace this use of System.out or System.err by a logger.(΅„©8πάΎΆ1
+[squid:S1197"8Move the array designator from the variable to the type.(Ϊϋώÿÿÿÿ8πάΎΆ1
+[
+squid:S106&"9Replace this use of System.out or System.err by a logger.(μ­ψϊÿÿÿÿ8πάΎΆ1
+esquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ò€Η
