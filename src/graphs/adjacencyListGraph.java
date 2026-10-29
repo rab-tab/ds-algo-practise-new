@@ -3,7 +3,7 @@ package graphs;
 
 import java.util.*;
 
-public class adjacencyListUndirectedGraph {
+public class adjacencyListGraph {
 
     static HashMap<Integer, List<Integer>> adjList =
             new HashMap<>();
