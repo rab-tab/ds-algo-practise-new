@@ -80,5 +80,33 @@ public class Graph {
     }
 
 
+    public int shortestPathBFS(int source, int destination) {
+
+            boolean[] visited = new boolean[V];
+            int[] distance = new int[V];
+
+            Queue<Integer> queue = new LinkedList<>();
+            visited[source] = true;
+            distance[source] = 0;
+            queue.add(source);
+
+            while (!queue.isEmpty()) {
+                int currentNode = queue.poll();
+
+                if (currentNode == destination) {
+                    return distance[currentNode];
+                }
+
+                for (int neighbor : adj[currentNode]) {
+                    if (!visited[neighbor]) {
+                        visited[neighbor] = true;
+                        distance[neighbor] = distance[currentNode] + 1;
+                        queue.add(neighbor);
+                    }
+                }
+            }
+
+            return -1; // Return -1 if there is no path from source to destination
+    }
 }
 
