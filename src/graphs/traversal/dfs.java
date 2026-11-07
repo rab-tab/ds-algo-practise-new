@@ -1,82 +1,102 @@
+
 package graphs.traversal;
 
 import java.util.*;
 
 public class dfs {
+
     static HashMap<Integer, List<Integer>> adjList = new HashMap<>();
-    static boolean visited[];
-    static Stack<Integer> ans = new Stack<>();
+    static Set<Integer> visited = new HashSet<>();
 
     public static void main(String[] args) {
-        // 0, - > 1,3
-        // 1 -> 2,3
-        // 2 - > 3
-        // 3
-        int noOfNodes = 4;
-        visited = new boolean[noOfNodes];
-        int u;
+
         Scanner scanner = new Scanner(System.in);
-        System.out.println("DFS traversal---");
+
+        // Input nodes
+        System.out.println("Enter total nodes:");
+        int noOfNodes = scanner.nextInt();
+
         for (int i = 0; i < noOfNodes; i++) {
-            System.out.println("Enter the node");
-            u = scanner.nextInt();
-            adjList.put(u, new ArrayList<>());
+
+            System.out.println("Enter node:");
+            int node = scanner.nextInt();
+
+            if (adjList.containsKey(node)) {
+                System.out.println("Duplicate node. Enter a unique node.");
+                i--;
+                continue;
+            }
+
+            adjList.put(node, new ArrayList<>());
         }
-        addEdge(0, 1);
-        addEdge(0, 3);
-        addEdge(1, 2);
-        addEdge(1, 3);
-        addEdge(2, 3);
+
+        // Input edges
+        System.out.println("Enter total edges:");
+        int noOfEdges = scanner.nextInt();
+
+        for (int i = 0; i < noOfEdges; i++) {
+
+            System.out.println("Enter u:");
+            int u = scanner.nextInt();
+
+            System.out.println("Enter v:");
+            int v = scanner.nextInt();
+
+            addEdge(u, v);
+        }
+
         printAdjList();
-        for (int i = 0; i < noOfNodes; i++) {
-            if (!visited[i]) {
-                topologicalSort(i, visited,ans);
+
+        System.out.println("DFS traversal:");
+
+        // Handle disconnected components
+        for (int node : adjList.keySet()) {
+
+            if (!visited.contains(node)) {
+                dfs(node);
             }
         }
-        System.out.println("Topological sort");
-        while(!ans.isEmpty()){
-            System.out.println(ans.peek());
-            ans.pop();
-        }
 
+        scanner.close();
     }
 
-    static void dfs(int source, boolean[] visited) {
+    static void dfs(int source) {
+
+        visited.add(source);
+
         System.out.println(source);
-        visited[source] = true;
-        List<Integer> tempAns = adjList.get(source);
-        for (Integer i : tempAns) {
-            if (!visited[i]) {
-                dfs(i, visited);
+
+        List<Integer> neighbours = adjList.get(source);
+
+        for (int neighbour : neighbours) {
+
+            if (!visited.contains(neighbour)) {
+                dfs(neighbour);
             }
         }
-
-    }
-
-    static void topologicalSort(int source, boolean[] visited,Stack<Integer> ans) {
-        visited[source] = true;
-        List<Integer> tempAns = adjList.get(source);
-        for (Integer i : tempAns) {
-            if (!visited[i]) {
-                dfs(i, visited);
-            }
-        }
-        //while returning store node in stack
-        ans.push(source);
-
-    }
-
-
-    private static void printAdjList() {
-        for (Map.Entry<Integer, List<Integer>> map : adjList.entrySet())
-            System.out.println(map.getKey() + "--- " + map.getValue());
     }
 
     private static void addEdge(int u, int v) {
 
+        if (!adjList.containsKey(u) || !adjList.containsKey(v)) {
+            throw new IllegalArgumentException("Node does not exist");
+        }
+
+        // Undirected graph
         adjList.get(u).add(v);
-        adjList.get(v).add(v);
+        adjList.get(v).add(u);
+    }
 
+    private static void printAdjList() {
 
+        System.out.println("Adjacency List:");
+
+        for (Map.Entry<Integer, List<Integer>> entry
+                : adjList.entrySet()) {
+
+            System.out.println(
+                    entry.getKey() + " --> " + entry.getValue()
+            );
+        }
     }
 }
